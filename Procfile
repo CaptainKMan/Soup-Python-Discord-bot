@@ -1,0 +1,1 @@
+worker: python Soups_v2.0.py

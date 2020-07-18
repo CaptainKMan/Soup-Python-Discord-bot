@@ -52,14 +52,6 @@ async def _8ball(ctx, *, question):
                  'You may rely on it.']
     await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
 
-#A Test of the word detector
-@client.event
-async def on_message(message):
-    if client.user.id != message.author.id:
-        if 'fruck' in message.content:
-            await client.send_message(message.channel, 'SWORE DETECTOR HAS DETECTED THE USE OF THE FR-WORD')
-
-    await client.process_commands(message)
 
 
 

@@ -72,23 +72,13 @@ async def _8ball(ctx, *, question):
                  'You have Got To Be Kidding...',
                  '24 Hour Flu',
                  'Abducted By Aliens',
-                 'Amnesia',
-                 'Car Trouble',
                  'Full Moon, Huh?',
-                 'I Was Mugged',
                  'It is In The Mail',
                  'It is Not My Job',
                  'I have Got a Headache',
-                 'Jury Duty',
-                 'Kryptonite',
-                 'Mexican Food',
-                 'My Dog Ate It',
                  'My Fish Died',
                  'No Hablo Ingleses',
-                 'Oprah',
-                 'The Voices Told Me To',
-                 'Traffic Was Bad',
-                 'What Memo?']
+                 'The Voices Told Me To']
     await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
 
 

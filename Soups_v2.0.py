@@ -52,7 +52,6 @@ async def _8ball(ctx, *, question):
                  'Yes.',
                  'Yes – definitely.',
                  'You may rely on it.',
-                 'As If',
                  'Ask Me If I Care',
                  'Dumb Question Ask Another',
                  'Forget About It',  

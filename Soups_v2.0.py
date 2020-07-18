@@ -19,7 +19,7 @@ async def on_member_join(member):
 async def on_member_remove(member):
     print(f'{member} has left a server.')"""
 
-#Check Latency
+#Check Latencys
 @client.command()
 async def ping(ctx):
     await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
@@ -60,4 +60,4 @@ async def _8ball(ctx, *, question):
 
 
 
-client.run(os.environ.get(BOT_TOKEN))
+client.run(os.environ.get("BOT_TOKEN"))

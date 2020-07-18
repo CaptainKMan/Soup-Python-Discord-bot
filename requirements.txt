@@ -1,0 +1,5 @@
+git+https://github/Rapptz/discord.py@rewrite
+PyNaCl--1.3.0
+random
+dnspython
+async-timeout

@@ -1,5 +1,7 @@
 import discord
 import random
+import os
+
 from discord.ext import commands
 
 client = commands.Bot(command_prefix = '#')
@@ -58,4 +60,4 @@ async def _8ball(ctx, *, question):
 
 
 
-client.run(env.BOT_TOKEN)
+client.run(os.environ.BOT_TOKEN)

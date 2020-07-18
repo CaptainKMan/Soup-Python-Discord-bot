@@ -60,4 +60,4 @@ async def _8ball(ctx, *, question):
 
 
 
-client.run()
+client.run(os.environ.get(BOT_TOKEN))

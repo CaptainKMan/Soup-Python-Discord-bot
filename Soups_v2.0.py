@@ -17,14 +17,22 @@ async def on_member_join(member):
 async def on_member_remove(member):
     print(f'{member} has left a server.')"""
 
+#Check Latency
 @client.command()
 async def ping(ctx):
     await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
 
+#Send Youtube Link
 @client.command()
 async def youtube(ctx):
     await ctx.send('```https://www.youtube.com/channel/UC0KW9Y85cFkrZyPkWrNVRUQ```')
 
+#Lists Commands
+@client.command(aliases=['help'])
+async def help(ctx):
+    await ctx.author.send('https://raw.githubusercontent.com/CaptainKMan/Readme/master/README.md')
+
+#Magik 8Ball
 @client.command(aliases=['8ball'])
 async def _8ball(ctx, *, question):
     responses = ['As I see it, yes.',

@@ -57,7 +57,7 @@ async def _8ball(ctx, *, question):
                  'Forget About It',  
                  'I do not Get A Clue,'
                  'In Your Dreams',
-                 'Not,'
+                 'NOT IN A BILLION YEARS,'
                  'Not A Chance', 
                  'Obviously',
                  'Oh Please',

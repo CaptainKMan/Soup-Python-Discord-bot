@@ -59,7 +59,7 @@ async def _8ball(ctx, *, question):
                  'Forget About It',  
                  'I do not Get A Clue,'
                  'In Your Dreams',
-                 'NOT IN A BILLION YEARS,'
+                 'NOT IN A BILLION YEARS',
                  'Not A Chance', 
                  'Obviously',
                  'Oh Please',
@@ -75,11 +75,10 @@ async def _8ball(ctx, *, question):
                  'You have Got To Be Kidding...',
                  'You are a Cringe Nanae Baby for Asking That Stupid Question',
                  'Were you Abducted By Aliens? Cause You Should Know the Answer to That',
-                 'Full Moon, Huh?',
                  'It is In The Mail',
                  'It is Not My Job to Answer That Question, its Yours',
                  'I have Got a Headache so I am not Going to answer, Ask again Later',
-                 'My Fish Died and I have Crippling Depression so NO',
+                 'My Fish Died and I have Crippling Depression, so NO',
                  'No Hablo Ingleses',
                  'The Voices Told Me To say That Your Question is "GEEEEEE"']
     await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')

@@ -89,7 +89,7 @@ async def clear(ctx, amount=1):
     await ctx.channel.purge(limit=amount)
     await ctx.send(':white_check_mark:')
     time.sleep(5)
-    await ctx.channel.purge(1)
+    await ctx.channel.purge(amount)
 
 
 

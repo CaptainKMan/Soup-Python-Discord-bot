@@ -87,6 +87,8 @@ async def _8ball(ctx, *, question):
 async def clear(ctx, amount=1):
     await ctx.channel.purge(limit=amount)
     await ctx.send(':white_check_mark:')
+    await time.sleep(5)
+    await ctx.channel.purge(1)
 
 
 

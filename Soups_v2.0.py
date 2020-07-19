@@ -82,7 +82,11 @@ async def _8ball(ctx, *, question):
                  'The Voices Told Me To say That Your Question is "GEEEEEE"']
     await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
 
-
+#clear command
+@client.command()
+async def clear(ctx, amount=1):
+    await ctx.channel.purge(limit=amount)
+    await ctx.send(':white_check_mark')
 
 
 

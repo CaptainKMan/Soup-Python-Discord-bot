@@ -11,14 +11,15 @@ client = commands.Bot(command_prefix = '#')
 async def on_ready():
     print('Soups_v2.0 is ready!')
 
-# Don't need or want this
-"""@client.event
+# Sends join message to console
+@client.event
 async def on_member_join(member):
     print(f'{member} has joined a server.')
 
+#sends leave message to console
 @client.event
 async def on_member_remove(member):
-    print(f'{member} has left a server.')"""
+    print(f'{member} has left a server.')
 
 #Check Latencys
 @client.command()
@@ -91,7 +92,10 @@ async def clear(ctx, amount=1, check=1):
     time.sleep(5)
     await ctx.channel.purge(limit=check)
 
-
+#Kick command
+@client.command()
+async def kick(ctx, member : discord.Member, *, reason=None):
+    await member.kick(reason=reason)
 
 
 

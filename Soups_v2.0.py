@@ -85,11 +85,11 @@ async def _8ball(ctx, *, question):
 
 #clear command
 @client.command()
-async def clear(ctx, amount=1):
+async def clear(ctx, amount=1, check=1):
     await ctx.channel.purge(limit=amount)
     await ctx.send(':white_check_mark:')
     time.sleep(5)
-    await ctx.channel.purge(amount)
+    await ctx.channel.purge(limit=check)
 
 
 

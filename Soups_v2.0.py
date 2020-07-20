@@ -8,6 +8,9 @@ from discord.ext import commands, tasks
 client = commands.Bot(command_prefix = '#')
 
 
+#limit Teseting CMDs to Me (Captain_KMan#8603)
+"""if ctx.author.id == 357663989418688513:"""
+
 # Sends ready message to console & Status
 @client.event
 async def on_ready():
@@ -28,7 +31,6 @@ async def on_member_remove(member):
 @client.command()
 async def ping(ctx):
     await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
-
 
 #Send Youtube Link
 @client.command()

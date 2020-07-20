@@ -31,15 +31,13 @@ async def on_member_join(member):
 async def on_member_remove(member):
     print(f'{member} has left a server.')
 
-def test_cmds():
-    return ctx.author.id == 357663989418688513
-
 #Check Latencys
 @client.command()
-@commands.check(test_cmds)
 async def ping(ctx):
-    await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
-
+    if message.author.id == ('357663989418688513'):
+        await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
+    else: 
+        return
 #Send Youtube Link
 @client.command()
 async def youtube(ctx):

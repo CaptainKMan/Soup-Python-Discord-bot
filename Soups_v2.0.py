@@ -7,11 +7,13 @@ from discord.ext import commands
 
 client = commands.Bot(command_prefix = '$')
 
+# Sends ready message to console
 @client.event
 async def on_ready():
+    await client.change(status=discord.status.online, activity=discord.Streaming(name = 'Rainbow 6', url='https://twitch.tv/dorito__soup'))
     print('Soups_v2.0 is ready!')
 
-# Sends join message to console
+#Sends join message to console
 @client.event
 async def on_member_join(member):
     print(f'{member} has joined a server.')

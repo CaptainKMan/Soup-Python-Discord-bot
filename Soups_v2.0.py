@@ -27,8 +27,7 @@ async def on_member_remove(member):
 #Check Latencys
 @client.command()
 async def ping(ctx):
-    if ctx.author.id == 357663989418688513:
-        await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
+    await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
 
 
 #Send Youtube Link

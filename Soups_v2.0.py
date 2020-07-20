@@ -10,7 +10,7 @@ client = commands.Bot(command_prefix = '$')
 # Sends ready message to console & Status
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.status.online, activity=discord.Streaming(name = 'Rainbow 6', url='https://twitch.tv/dorito__soup'))
+    await client.change_presence(status=discord.Status.online, activity=discord.Streaming(name = 'Rainbow 6', url='https://twitch.tv/dorito__soup'))
     print('Soups_v2.0 is ready!')
 
 #Sends join message to console

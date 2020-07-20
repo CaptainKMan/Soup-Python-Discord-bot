@@ -7,7 +7,7 @@ from discord.ext import commands
 
 client = commands.Bot(command_prefix = '$')
 
-# Sends ready message to console
+# Sends ready message to console & Status
 @client.event
 async def on_ready():
     await client.change(status=discord.status.online, activity=discord.Streaming(name = 'Rainbow 6', url='https://twitch.tv/dorito__soup'))

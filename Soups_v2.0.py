@@ -18,7 +18,7 @@ client = commands.Bot(command_prefix = '#')
 # Sends ready message to console & Status
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.online, activity=discord.Watching('MemeSoup.'))
+    await client.change_presence(status=discord.Status.online, activity=discord.Playing('Rainbow Six: Siege'))
     print('Soups_v2.0 is ready!')
 
 #Sends join message to console

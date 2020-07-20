@@ -5,7 +5,7 @@ import time
 
 from discord.ext import commands
 
-client = commands.Bot(command_prefix = '#')
+client = commands.Bot(command_prefix = '$')
 
 @client.event
 async def on_ready():
@@ -93,9 +93,29 @@ async def clear(ctx, amount=1, check=1):
 
 #Kick command
 @client.command()
-async def kick(ctx, member : discord.Member, *, reason=None):
+async def kick(ctx, member : discord.Member, *, reason=None, check=1):
     await member.kick(reason=reason)
+    time.sleep(5)
+    await ctx.channel.purge(limit=check)
 
+#Ban Command
+@client.command()
+async def ban(ctx, member : discord.Member, *, reason=None, check=1):
+    await member.ban(reason=reason)
+    time.sleep(5)
+    await ctx.channel.purge(limit=check)
+
+#Unban Command
+@client.command()
+async def unban(ctx, *, member):
+    banned_users = await ctx.guild.bans()
+    member_name, member_discriminator = member.split('#')
+
+    for ban_entry in banned_users:
+        user = ban_entry.user
+
+        if (user.name, user.member_discriminator) == (member_name, member_discriminator):
+            await ctx.guild.unban(user)
 
 
 client.run(os.environ['BOT_TOKEN'])

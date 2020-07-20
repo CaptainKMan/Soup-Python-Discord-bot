@@ -7,18 +7,11 @@ from discord.ext import commands, tasks
 
 client = commands.Bot(command_prefix = '#')
 
-#Use this to only allow Captain_KMan#4631 to test new cmds
-"""def test_cmds():
-    return ctx.author.id == 357663989418688513"""
-
-#This is what you use to implement the check
-"""@commands.check(test_cmds)"""
-
 
 # Sends ready message to console & Status
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.online, activity=discord.Game('Rainbow Six: Siege'))
+    await client.change_presence(status=discord.Status.online, activity=discord.Watching('MemeSoup.'))
     print('Soups_v2.0 is ready!')
 
 #Sends join message to console
@@ -34,10 +27,10 @@ async def on_member_remove(member):
 #Check Latencys
 @client.command()
 async def ping(ctx):
-    if message.author.id == ('357663989418688513'):
+    if ctx.author.id == 357663989418688513:
         await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
-    else: 
-        return
+
+
 #Send Youtube Link
 @client.command()
 async def youtube(ctx):

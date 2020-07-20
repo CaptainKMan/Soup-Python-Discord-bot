@@ -17,6 +17,10 @@ async def load(ctx, extension):
 async def unload(ctx, extension):
     client.unload_extension(f'cogs.{extension}')
 
+for filename in os.listdir('./cogs'):
+    if filename.endswith('.py'):
+        client.load_extension(f'cogs.{filename[:-3]}')
+
 @client.event
 async def on_ready():
     print('Soups_v2.0 is ready!')
@@ -100,32 +104,5 @@ async def clear(ctx, amount=1, check=1):
     await ctx.send(':white_check_mark:')
     time.sleep(5)
     await ctx.channel.purge(limit=check)
-
-#Kick command
-@client.command()
-async def kick(ctx, member : discord.Member, *, reason=None, check=1):
-    await member.kick(reason=reason)
-    time.sleep(5)
-    await ctx.channel.purge(limit=check)
-
-#Ban Command
-@client.command()
-async def ban(ctx, member : discord.Member, *, reason=None, check=1):
-    await member.ban(reason=reason)
-    time.sleep(5)
-    await ctx.channel.purge(limit=check)
-
-#Unban Command
-@client.command()
-async def unban(ctx, *, member):
-    banned_users = await ctx.guild.bans()
-    member_name, member_discriminator = member.split('#')
-
-    for ban_entry in banned_users:
-        user = ban_entry.user
-
-        if (user.name, user.member_discriminator) == (member_name, member_discriminator):
-            await ctx.guild.unban(user)
-
 
 client.run(os.environ['BOT_TOKEN'])

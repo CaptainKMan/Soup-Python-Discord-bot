@@ -3,9 +3,9 @@ import random
 import os
 import time
 
-from discord.ext import commands
+from discord.ext import commands, tasks
 
-client = commands.Bot(command_prefix = '$')
+client = commands.Bot(command_prefix = '#')
 
 # Sends ready message to console & Status
 @client.event

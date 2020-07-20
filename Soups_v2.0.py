@@ -7,6 +7,14 @@ from discord.ext import commands, tasks
 
 client = commands.Bot(command_prefix = '#')
 
+#Use this to only allow Captain_KMan#4631 to test new cmds
+"""def test_cmds():
+    return ctx.author.id == 357663989418688513"""
+
+#This is what you use to implement the check
+"""@commands.check(test_cmds)"""
+
+
 # Sends ready message to console & Status
 @client.event
 async def on_ready():
@@ -23,8 +31,12 @@ async def on_member_join(member):
 async def on_member_remove(member):
     print(f'{member} has left a server.')
 
+def test_cmds():
+    return ctx.author.id == 357663989418688513
+
 #Check Latencys
 @client.command()
+@commands.check(test_cmds)
 async def ping(ctx):
     await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
 

@@ -38,6 +38,7 @@ async def ping(ctx):
 async def youtube(ctx):
     await ctx.send('```https://www.youtube.com/channel/UC0KW9Y85cFkrZyPkWrNVRUQ```')
 
+#Twitch
 @client.command()
 async def twitch(ctx):
     await ctx.send('```https://www.twitch.com/dorito__soup```')

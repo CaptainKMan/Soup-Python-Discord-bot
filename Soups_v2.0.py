@@ -107,8 +107,8 @@ async def FluxSoup(ctx, *,  avamember : discord.Member=None):
         description="The founder and supreme leader of the Soup Kitchen."
     )
 
-    embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/443208943213477889/601699371221909504/imagesfidosfhdis.jpg")
-    embed.set_footer(text="Last Updated by DoritoSoup on 7/21/2020.", image=userAvatarUrl)
+    embed.set_thumbnail(f'{userAvatarUrl}')
+    embed.set_footer(text="Last Updated by DoritoSoup on 7/21/2020.")
 
     await ctx.send(embed=embed)
 

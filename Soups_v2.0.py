@@ -97,21 +97,6 @@ async def clear(ctx, amount=1, check=1):
     time.sleep(5)
     await ctx.channel.purge(limit=check)
 
-#member commands with embeds
-@client.command()
-async def member(ctx):
-    embed = discord.Embed(
-        color=discord.Colour.blue(),
-        title="FluxSoup. (a.k.a Scott)",
-        description="The founder and supreme leader of the Soup Kitchen."
-    )
-
-    embed.set_thumbnail(url='https://cdn.discordapp.com/avatars/142126035301957632/08b1a2878dfc107da0fa93b9231bf440.png?size=1024')
-    embed.set_footer(text="Last Updated by DoritoSoup on 7/21/2020.", url='https://cdn.discordapp.com/avatars/357663989418688513/efba3105379791574e341696fd4a5334.png?size=1024')
-
-    await ctx.send(embed=embed)
-
-
 
 
 

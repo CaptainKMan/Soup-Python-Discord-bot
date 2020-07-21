@@ -38,6 +38,12 @@ async def ping(ctx):
 async def youtube(ctx):
     await ctx.send('```https://www.youtube.com/channel/UC0KW9Y85cFkrZyPkWrNVRUQ```')
 
+@client.command()
+async def twitch(ctx):
+    await ctx.send('```https://www.twitch.com/dorito__soup```')
+    await ctx.send('```https://www.twitch.com/daecu8603```')
+    await ctx.send('```https://www.twitch.com/thejellysoup')
+
 #Magik 8Ball
 @client.command(aliases=['8ball'])
 async def _8ball(ctx, *, question):

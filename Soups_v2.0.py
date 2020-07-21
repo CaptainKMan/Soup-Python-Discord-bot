@@ -97,6 +97,25 @@ async def clear(ctx, amount=1, check=1):
     time.sleep(5)
     await ctx.channel.purge(limit=check)
 
+#member commands with embeds
+@client.command()
+async def FluxSoup(ctx, *,  avamember : discord.Member=None):
+    userAvatarUrl = avamember.avatar_url
+    embed = discord.Embed(
+        color=discord.Colour.blue(),
+        title="FluxSoup. (a.k.a Scott)",
+        description="The founder and supreme leader of the Soup Kitchen."
+    )
+
+    embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/443208943213477889/601699371221909504/imagesfidosfhdis.jpg")
+    embed.set_footer(text="Last Updated by DoritoSoup on 7/21/2020.", image=userAvatarUrl)
+
+    await ctx.send(embed=embed)
+
+
+
+
+
 #Kick/Ban/Unban
     #Kick command
     """@client.command()

@@ -97,6 +97,79 @@ async def _8ball(ctx, *, question):
                  'The Voices Told Me To say That Your Question is "GEEEEEE"']
     await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
 
+#random defense op 
+@client.command(aliases=['dop'])
+async def Defense_random_operator(ctx):
+    defense_ops = ['Mute',
+                 'Smoke',
+                 'Pulse',
+                 'Castle',
+                 'Doc',
+                 'Rook',
+                 'Bandit',
+                 'Jager',
+                 'KapKan',
+                 'Techanka',
+                 'Frost',
+                 'Valk',
+                 'Cav',
+                 'Echo',
+                 'Mira',
+                 'Lesion',
+                 'Ela',
+                 'Vigil',
+                 'Maestro',
+                 'Alibi',
+                 'Clash',
+                 'Kaid',
+                 'Mozzie',  
+                 'Warden',
+                 'Goyo da Boyo',
+                 'Melusi',
+                 'Oryx', 
+                 'Wamai',
+                 'Recruit (LMG)',
+                 'Recruit (DMR)',
+                 'Recruit (AR)']
+    await ctx.send(f'You should go: {random.choice(defense_ops)}')
+
+#random Offense op 
+@client.command(aliases=['aop'])
+async def Attack_random_operator(ctx):
+    Attack_ops = ['Ace',
+                 'Iana',
+                 'Kali',
+                 'Amaru',
+                 'Kokk',
+                 'Gridlock',
+                 'Nomad',
+                 'Maverick',
+                 'Lion',
+                 'Finka',
+                 'Dokkaebi',
+                 'Zofia',
+                 'Ying',
+                 'Jackal',
+                 'Hibana',
+                 'Capitao',
+                 'Blackbeard',
+                 'Buck',
+                 'Sledge',
+                 'Thatcher',
+                 'Ash',
+                 'Thermite',
+                 'Montagne',  
+                 'Twitch',
+                 'Blitz',
+                 'IQ',
+                 'Fuze', 
+                 'Glaz',
+                 'Recruit (LMG)',
+                 'Recruit (DMR)',
+                 'Recruit (AR)']
+    await ctx.send(f'You should go: {random.choice(Attack_ops)}')
+
+
 #clear command
 @client.command()
 async def clear(ctx, amount=1, check=1):

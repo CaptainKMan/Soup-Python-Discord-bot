@@ -169,7 +169,6 @@ async def Attack_random_operator(ctx):
                  'Recruit (AR)']
     await ctx.send(f'You should go: {random.choice(Attack_ops)}')
 
-
 #clear command
 @client.command()
 async def clear(ctx, amount=1, check=1):

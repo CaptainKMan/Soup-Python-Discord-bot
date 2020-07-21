@@ -128,9 +128,8 @@ async def Defense_random_operator(ctx):
                  'Melusi',
                  'Oryx', 
                  'Wamai',
-                 'Recruit (LMG)',
-                 'Recruit (DMR)',
-                 'Recruit (AR)']
+                 'Recruit (M870)',
+                 'Recruit (MP5K)']
     await ctx.send(f'You should go: {random.choice(defense_ops)}')
 
 #random Offense op 
@@ -164,8 +163,9 @@ async def Attack_random_operator(ctx):
                  'IQ',
                  'Fuze', 
                  'Glaz',
-                 'Recruit (MP5K)',
-                 'Recruit (M870)']
+                 'Recruit (LMG)',
+                 'Recruit (DMR)',
+                 'Recruit (AR)']
     await ctx.send(f'You should go: {random.choice(Attack_ops)}')
 
 #clear command

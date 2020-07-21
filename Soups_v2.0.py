@@ -164,9 +164,8 @@ async def Attack_random_operator(ctx):
                  'IQ',
                  'Fuze', 
                  'Glaz',
-                 'Recruit (LMG)',
-                 'Recruit (DMR)',
-                 'Recruit (AR)']
+                 'Recruit (MP5K)',
+                 'Recruit (M870)']
     await ctx.send(f'You should go: {random.choice(Attack_ops)}')
 
 #clear command

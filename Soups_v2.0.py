@@ -168,6 +168,29 @@ async def Attack_random_operator(ctx):
                  'Recruit (AR)']
     await ctx.send(f'You should go: {random.choice(Attack_ops)}')
 
+
+#randome game things
+@client.command(aliases=['gl'])
+async def Game_Limitations(ctx):
+    limitors = ['can not ADS',
+                'can play normally',
+                'can only play in prone position',
+                'can only play in crouching position',
+                'can only sprint and can not ads',
+                'can only use gadgets',
+                'can only use secondary',
+                'are not to use gadgets',
+                'are not aloud to use audio, no sound allowed. That includes discord sounds. In other words mute your PC.',
+                'have to listen to this while you play, on repeat, on 100% volume. https://https://www.youtube.com/watch?v=6-5F3jt_WWs',
+                'are not allowed to lean',
+                'are not allowed to lean or crouch',
+                'change your primary weapons firing mode once',
+                'can not ads or lean',
+                'are not allowed to reload your primary weapon',
+                'have to tk as many people as possible with out getting banned',
+                'have to tk the party leader at the beginning of every round for 1 match']
+    await ctx.send(f'You {random.choice(limitors)}.')
+
 #clear command
 @client.command()
 async def clear(ctx, amount=1, check=1):

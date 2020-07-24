@@ -198,10 +198,10 @@ async def Rock_Paper_Scissors(ctx):
               'Scissors']
     await ctx.send(f'{random.choice(rockps)}.')
 
-#rigged rps
-@client.command()
+#rigged paper
+@client.command(aliases=['rock'])
 async def Paper(ctx):
-    await ctx.send('')
+    await ctx.send('Paper')
 
 
 

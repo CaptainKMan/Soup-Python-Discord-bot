@@ -191,12 +191,12 @@ async def Game_Limitations(ctx):
     await ctx.send(f'You {random.choice(limitors)}.')
 
 #random rock paper scissors
-@client.command(aliases=['Rock', 'Paper', 'Scissors'])
+'''@client.command(aliases=['Rock', 'Paper', 'Scissors'])
 async def Rock_Paper_Scissors(ctx):
     rockps = ['Rock',
               'Paper',
               'Scissors']
-    await ctx.send(f'{random.choice(rockps)}.')
+    await ctx.send(f'{random.choice(rockps)}.')'''
 
 #rigged paper
 @client.command(aliases=['rock'])

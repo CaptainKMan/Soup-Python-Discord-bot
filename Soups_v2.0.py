@@ -225,7 +225,7 @@ async def clear(ctx, amount=1, check=1):
 #SCP command
 @client.command()
 async def scp(ctx):
-    scp = random.randint(1,5000)
+    scp = random.randint(1,9)
     if scp <= ('10'):
         await ctx.send(f'SCP-00{scp}')
         await ctx.send(f'http://www.scp-wiki.net/scp-00{scp}')

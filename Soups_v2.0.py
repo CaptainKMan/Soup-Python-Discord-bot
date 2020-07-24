@@ -229,7 +229,7 @@ async def scp(ctx):
     if scp <= (10):
         await ctx.send(f'SCP-00{scp}')
         await ctx.send(f'http://www.scp-wiki.net/scp-00{scp}')
-    if scp <= (100):
+    if scp <= (100) and scp >= (10):
         await ctx.send(f'SCP-0{scp}')
         await ctx.send(f'http://www.scp-wiki.net/scp-0{scp}')
     if scp >= (100):

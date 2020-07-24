@@ -221,6 +221,10 @@ async def clear(ctx, amount=1, check=1):
     time.sleep(5)
     await ctx.channel.purge(limit=check)
 
+#SCP command
+@client.command()
+async def scp(ctx):
+    await ctx.send(f'SCP-{random.rand(0,5000)}')
 
 #Kick/Ban/Unban
     #Kick command

@@ -200,17 +200,17 @@ async def Rock_Paper_Scissors(ctx):
 
 #rigged paper
 @client.command(aliases=['rock'])
-async def dumb(ctx):
+async def _paper(ctx):
     await ctx.send('Paper')
 
 #rigged scissors
 @client.command(aliases=['scissors'])
-async def words(ctx):
+async def _rock(ctx):
     await ctx.send('Rock')
 
 #rigged rock
 @client.command(aliases=['paper'])
-async def face(ctx):
+async def _scissors(ctx):
     await ctx.send('Scissors')
 
 #clear command

@@ -186,7 +186,7 @@ async def Game_Limitations(ctx):
                 'change your primary weapons firing mode once',
                 'can not ads or lean',
                 'are not allowed to reload your primary weapon',
-                'have to tk as many people as possible with out getting banned',
+                'have to tk as many people as possible without getting banned',
                 'have to tk the party leader at the beginning of every round for 1 match']
     await ctx.send(f'You {random.choice(limitors)}.')
 

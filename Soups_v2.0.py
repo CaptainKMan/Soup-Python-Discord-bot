@@ -226,6 +226,7 @@ async def clear(ctx, amount=1, check=1):
 @client.command()
 async def scp(ctx):
     await ctx.send(f'SCP-{random.randint(0,5000)}')
+    await ctx.send(f'```http://www.scp-wiki.net/scp-{random.randint(0,5000)}```')
 
 #Kick/Ban/Unban
     #Kick command

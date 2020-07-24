@@ -168,7 +168,6 @@ async def Attack_random_operator(ctx):
                  'Recruit (AR)']
     await ctx.send(f'You should go: {random.choice(Attack_ops)}')
 
-
 #random game things
 @client.command(aliases=['gl'])
 async def Game_Limitations(ctx):
@@ -197,7 +196,14 @@ async def Rock_Paper_Scissors(ctx):
     rockps = ['Rock',
               'Paper',
               'Scissors']
-    await ctx.send(f'You {random.choice(rockps)}.')
+    await ctx.send(f'{random.choice(rockps)}.')
+
+#rigged rps
+@client.command()
+async def Paper(ctx):
+    await ctx.send('')
+
+
 
 #clear command
 @client.command()

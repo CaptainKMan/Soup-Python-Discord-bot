@@ -169,7 +169,7 @@ async def Attack_random_operator(ctx):
     await ctx.send(f'You should go: {random.choice(Attack_ops)}')
 
 
-#randome game things
+#random game things
 @client.command(aliases=['gl'])
 async def Game_Limitations(ctx):
     limitors = ['can not ADS',
@@ -191,6 +191,14 @@ async def Game_Limitations(ctx):
                 'have to tk the party leader at the beginning of every round for 1 match']
     await ctx.send(f'You {random.choice(limitors)}.')
 
+#random rock paper scissors
+@client.command(aliases=['rps'])
+async def Rock_Paper_Scissors(ctx):
+    rockps = ['Rock',
+              'Paper',
+              'Scissors']
+    await ctx.send(f'You {random.choice(rockps)}.')
+
 #clear command
 @client.command()
 async def clear(ctx, amount=1, check=1):
@@ -198,8 +206,6 @@ async def clear(ctx, amount=1, check=1):
     await ctx.send(':white_check_mark:')
     time.sleep(5)
     await ctx.channel.purge(limit=check)
-
-
 
 
 #Kick/Ban/Unban

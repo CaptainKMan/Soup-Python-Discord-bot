@@ -12,17 +12,17 @@ class Soup_cmds(commands.Cog):
         self.client = client
 
 
-#Send Youtube Link
-@client.command()
-async def youtube(self, ctx):
-    await ctx.send('```https://www.youtube.com/channel/UC0KW9Y85cFkrZyPkWrNVRUQ```')
+    #Send Youtube Link
+    @client.command()
+    async def youtube(self, ctx):
+        await ctx.send('```https://www.youtube.com/channel/UC0KW9Y85cFkrZyPkWrNVRUQ```')
 
-#Twitch
-@client.command()
-async def twitch(self, ctx):
-    await ctx.send('```https://www.twitch.com/dorito__soup```')
-    await ctx.send('```https://www.twitch.com/daecu8603```')
-    await ctx.send('```https://www.twitch.com/thejellysoup')
+    #Twitch
+    @client.command()
+    async def twitch(self, ctx):
+        await ctx.send('```https://www.twitch.com/dorito__soup```')
+        await ctx.send('```https://www.twitch.com/daecu8603```')
+        await ctx.send('```https://www.twitch.com/thejellysoup')
 
 
 def setup(client):

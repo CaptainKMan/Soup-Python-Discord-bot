@@ -1,5 +1,9 @@
 import discord
-from discord.ext import commands
+import random
+import os
+import time
+from itertools import cycle
+from discord.ext import commands, tasks
 
 client = commands.Bot(command_prefix = '*')
 

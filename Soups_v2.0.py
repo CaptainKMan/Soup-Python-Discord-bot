@@ -241,6 +241,7 @@ async def scp(ctx):
 #SCP link
 @client.command()
 async def scp_link(ctx, *, number):
+    await ctx.send(f'SCP-{number}')
     await ctx.send(f'http://www.scp-wiki.net/scp-{number}')
 
 #Kick/Ban/Unban

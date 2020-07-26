@@ -7,7 +7,19 @@ from discord.ext import commands, tasks
 
 client = commands.Bot(command_prefix = '*')
 
-client.remove_command('help')
+
+
+@client.comman()
+async def load(ctx, extension):
+    client.load_extension(f'cogs.{extension}')
+
+@client.comman()
+async def unload(ctx, extension):
+    client.unload_extension(f'cogs.{extension}')
+
+for filename in os.listdir('./cogs'):
+    if filename.endswith('.py'):
+        client.load_extension(f'cogs.{filename[:-3]}')
 
 #limit Teseting CMDs to Me (Captain_KMan#8603)
 """if ctx.author.id == 357663989418688513:"""
@@ -224,25 +236,6 @@ async def clear(ctx, amount=1, check=1):
     time.sleep(5)
     await ctx.channel.purge(limit=check)
 
-#SCP command
-@client.command()
-async def scp(ctx):
-    scp = random.randint(1,5000)
-    if scp <= (10):
-        await ctx.send(f'SCP-00{scp}')
-        await ctx.send(f'http://www.scp-wiki.net/scp-00{scp}')
-    if scp <= (100) and scp >= (10):
-        await ctx.send(f'SCP-0{scp}')
-        await ctx.send(f'http://www.scp-wiki.net/scp-0{scp}')
-    if scp >= (100):
-        await ctx.send(f'SCP-{scp}')
-        await ctx.send(f'http://www.scp-wiki.net/scp-{scp}')
-
-#SCP link
-@client.command()
-async def scp_link(ctx, *, number):
-    await ctx.send(f'SCP-{number}')
-    await ctx.send(f'http://www.scp-wiki.net/scp-{number}')
 
 #Kick/Ban/Unban
     #Kick command

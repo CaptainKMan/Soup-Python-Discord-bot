@@ -239,7 +239,7 @@ async def scp(ctx):
         await ctx.send(f'http://www.scp-wiki.net/scp-{scp}')
 
 #SCP link
-@client.command(aliases=['scp_link'])
+@client.command()
 async def scp_link(ctx, *, number):
     if number <= (10):
         await ctx.send(f'SCP-00{number}')

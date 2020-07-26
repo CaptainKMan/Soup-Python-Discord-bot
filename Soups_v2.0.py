@@ -181,7 +181,7 @@ async def Game_Limitations(ctx):
                 'can only use gadgets',
                 'can only use secondary',
                 'are not to use gadgets',
-                'are not aloud to use audio, no sound allowed. That includes discord sounds. In other words mute your PC.',
+                'are not aloud to use audio, no sound allowed. That includes discord sounds. In other words mute your PC',
                 'have to listen to this while you play, on repeat, on 100% volume. https://www.youtube.com/watch?v=6-5F3jt_WWs',
                 'are not allowed to lean',
                 'are not allowed to lean or crouch',
@@ -238,6 +238,18 @@ async def scp(ctx):
         await ctx.send(f'SCP-{scp}')
         await ctx.send(f'http://www.scp-wiki.net/scp-{scp}')
 
+#SCP link
+@client.command(aliases=['scp link'])
+async def scp_link(ctx, *, number):
+    if number <= (10):
+        await ctx.send(f'SCP-00{number}')
+        await ctx.send(f'http://www.scp-wiki.net/scp-00{number}')
+    if number <= (100) and number >= (10):
+        await ctx.send(f'SCP-0{number}')
+        await ctx.send(f'http://www.scp-wiki.net/scp-0{number}')
+    if number >= (100):
+        await ctx.send(f'SCP-{number}')
+        await ctx.send(f'http://www.scp-wiki.net/scp-{number}')
 
 #Kick/Ban/Unban
     #Kick command

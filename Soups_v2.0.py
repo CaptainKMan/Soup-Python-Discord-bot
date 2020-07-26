@@ -241,15 +241,7 @@ async def scp(ctx):
 #SCP link
 @client.command()
 async def scp_link(ctx, *, number):
-    if number <= (10):
-        await ctx.send(f'SCP-00{number}')
-        await ctx.send(f'http://www.scp-wiki.net/scp-00{number}')
-    if number <= (100) and number >= (10):
-        await ctx.send(f'SCP-0{number}')
-        await ctx.send(f'http://www.scp-wiki.net/scp-0{number}')
-    if number >= (100):
-        await ctx.send(f'SCP-{number}')
-        await ctx.send(f'http://www.scp-wiki.net/scp-{number}')
+    await ctx.send(f'http://www.scp-wiki.net/scp-{number}')
 
 #Kick/Ban/Unban
     #Kick command

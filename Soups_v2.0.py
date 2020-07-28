@@ -7,6 +7,8 @@ from discord.ext import commands, tasks
 
 client = commands.Bot(command_prefix = '*')
 
+client.remove_command('help')
+
 #limit Teseting CMDs to Me (Captain_KMan#8603)
 """if ctx.author.id == 357663989418688513:"""
 

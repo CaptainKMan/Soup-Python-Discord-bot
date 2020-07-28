@@ -71,6 +71,13 @@ class Fun_cmds(commands.Cog):
                 'Scissors']
         await ctx.send(f'{random.choice(rockps)}')
 
+    #
+
+
+
+
+
+
     #rigged RPS
         '''#rigged paper
         @client.command(aliases=['rock'])
@@ -86,9 +93,6 @@ class Fun_cmds(commands.Cog):
         @client.command(aliases=['paper'])
         async def _scissors(ctx):
             await ctx.send('Scissors')'''
-
-
-
 
 def setup(client):
     client.add_cog(Fun_cmds(client))

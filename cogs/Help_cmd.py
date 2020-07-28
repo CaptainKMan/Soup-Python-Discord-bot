@@ -23,9 +23,9 @@ class Help_cmd(commands.Cog):
         )
 
         embed.set_author(name='Help')
-        embed.add_field(name='ping', value='pong')
+        embed.add_field(name='ping', value='pong', inline=False)
 
-        await ctx.send_message(author, embed=embed)
+        await ctx.send(embed=embed)
 
 
 def setup(client):

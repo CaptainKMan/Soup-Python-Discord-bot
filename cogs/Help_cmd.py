@@ -13,7 +13,7 @@ class Help_cmd(commands.Cog):
 
     #clear command
     @client.command()
-    async def help(self):
+    async def help(self, ctx):
         author = ctx.message.author
 
         embed = discord.Embed(
@@ -24,7 +24,7 @@ class Help_cmd(commands.Cog):
         embed.set_author(name='Help')
         embed.add_field(name='ping', value='pong')
 
-
+        await ctx.send(author, embed=embed)
 
 
 def setup(client):

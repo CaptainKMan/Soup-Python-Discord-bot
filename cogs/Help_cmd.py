@@ -18,7 +18,7 @@ class Help_cmd(commands.Cog):
         author = ctx.message.author
 
         embed = discord.Embed(
-            color = discord.Color.blue()
+            color = discord.Color.dark_blue()
 
         )
 

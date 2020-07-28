@@ -22,7 +22,7 @@ class Help_cmd(commands.Cog):
 
         )
 
-        embed.author(name='Soup v2.1 Bot Commands')
+        embed.set_author(name='Soup v2.1 Bot Commands')
         embed.url('https://raw.githubusercontent.com/CaptainKMan/Readme/master/README.md')
         embed.description('These are the commands')
         embed.add_field(name='The Ping Command', value='```*ping = pong```', inline=False)

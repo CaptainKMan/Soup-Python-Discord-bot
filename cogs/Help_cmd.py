@@ -28,7 +28,6 @@ class Help_cmd(commands.Cog):
         embed.add_field(name="The Ping Command", value="*ping = pong", inline=False)
         embed.add_field(name="Youtube", value="*youtube = sends the Soup Kitchen's youtube link", inline=False)
         embed.add_field(name="8ball", value="*8ball = an 8ball", inline=False)
-        embed.set_image('https://cdn.discordapp.com/avatars/733848929053180015/c3f5b24b94a47c8f079c65e740d92a0c.png?size=128')
 
         await ctx.send(embed=embed)
 

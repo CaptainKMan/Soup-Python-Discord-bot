@@ -38,31 +38,10 @@ async def on_member_join(member):
 async def on_member_remove(member):
     print(f'{member} has left a server.')
 
-#Kick/Ban/Unban
-    #Kick command
-    """@client.command()
-    async def kick(ctx, member : discord.Member, *, reason=None, check=1):
-        await member.kick(reason=reason)
-        time.sleep(5)
-        await ctx.channel.purge(limit=check)"""
+#Check Latencys
+@client.command()
+async def ping(self, ctx):
+    await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
 
-    #Ban Command
-    """@client.command()
-    async def ban(ctx, member : discord.Member, *, reason=None, check=1):
-        await member.ban(reason=reason)
-        time.sleep(5)
-        await ctx.channel.purge(limit=check)"""
-
-    #Unban Command
-    """@client.command()
-    async def unban(ctx, *, member):
-        banned_users = await ctx.guild.bans()
-        member_name, member_discriminator = member.split('#')
-
-        for ban_entry in banned_users:
-            user = ban_entry.user
-
-            if (user.name, user.member_discriminator) == (member_name, member_discriminator):
-            await ctx.guild.unban(user)"""
 
 client.run(os.environ['BOT_TOKEN'])

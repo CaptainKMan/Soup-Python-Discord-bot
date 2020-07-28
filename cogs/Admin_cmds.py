@@ -11,12 +11,6 @@ class SCP_cmds(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-
-    #Check Latencys
-    @client.command()
-    async def ping(self, ctx):
-        await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
-
     #clear command
     @client.command()
     async def clear(self, ctx, amount=1, check=1):
@@ -26,6 +20,36 @@ class SCP_cmds(commands.Cog):
         await ctx.channel.purge(limit=check)
 
 
+
+
+
+
+#Kick/Ban/Unban
+    #Kick command
+    """@client.command()
+    async def kick(ctx, member : discord.Member, *, reason=None, check=1):
+        await member.kick(reason=reason)
+        time.sleep(5)
+        await ctx.channel.purge(limit=check)"""
+
+    #Ban Command
+    """@client.command()
+    async def ban(ctx, member : discord.Member, *, reason=None, check=1):
+        await member.ban(reason=reason)
+        time.sleep(5)
+        await ctx.channel.purge(limit=check)"""
+
+    #Unban Command
+    """@client.command()
+    async def unban(ctx, *, member):
+        banned_users = await ctx.guild.bans()
+        member_name, member_discriminator = member.split('#')
+
+        for ban_entry in banned_users:
+            user = ban_entry.user
+
+            if (user.name, user.member_discriminator) == (member_name, member_discriminator):
+            await ctx.guild.unban(user)"""
 
 def setup(client):
     client.add_cog(SCP_cmds(client))

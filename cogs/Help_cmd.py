@@ -22,7 +22,8 @@ class Help_cmd(commands.Cog):
 
         )
 
-        embed.title(name='Soup v2.1 Bot Commands', url=('https://raw.githubusercontent.com/CaptainKMan/Readme/master/README.md'))
+        embed.title(name='Soup v2.1 Bot Commands')
+        embed.url('https://raw.githubusercontent.com/CaptainKMan/Readme/master/README.md')
         embed.description('These are the commands')
         embed.add_field(name='The Ping Command', value='```*ping = pong```', inline=False)
         embed.thumbnail('https://cdn.discordapp.com/avatars/733848929053180015/c3f5b24b94a47c8f079c65e740d92a0c.png?size=128')

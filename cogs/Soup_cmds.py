@@ -6,6 +6,7 @@ from itertools import cycle
 from discord.ext import commands, tasks
 
 client = commands.Bot(command_prefix = '*')
+client.remove_command('help')
 
 class Soup_cmds(commands.Cog):
     def __init__(self, client):

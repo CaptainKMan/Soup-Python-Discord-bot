@@ -25,7 +25,7 @@ class Help_cmd(commands.Cog):
 
         )
 
-        embed.set_author()
+        embed.set_author(name='Soups v2.0')
         
         embed.add_field(name='Youtube', value="```*youtube = sends the Soup Kitchen's youtube link```", inline=False)
 

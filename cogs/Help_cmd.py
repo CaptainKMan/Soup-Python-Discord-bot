@@ -27,6 +27,7 @@ class Help_cmd(commands.Cog):
 
         embed.set_author(name="Soups v2.0", url="https://raw.githubusercontent.com/CaptainKMan/Readme/master/README.md", icon_url="https://cdn.discordapp.com/avatars/733848929053180015/c3f5b24b94a47c8f079c65e740d92a0c.png?size=128")
         embed.add_field(name='Youtube', value="*youtube = sends the Soup Kitchen's youtube link", inline=False)
+        embed.add_field(name='\u200b')
         embed.add_field(name='8ball', value='*8ball = an 8ball', inline=False)
         embed.add_field(name='Help', value='*help = lists commands', inline=False)
         embed.add_field(name='Twitch', value="*twitch = sends the Soup Kitchen's Member's Twitch.tv links", inline=False)

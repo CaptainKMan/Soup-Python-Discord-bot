@@ -36,7 +36,7 @@ class Help_cmd(commands.Cog):
         embed.add_field(name='Game Limitations', value='*gl = specifies challenges that you have to abide by for that match in R6 Siege', inline=False)
         embed.add_field(name='Rock, Paper, Scissors', value='*rock, paper, or scissors = I think you know what this does', inline=False)
         embed.add_field(name='SCP', value='*scp = sends a random SCP', inline=False)
-        embed.add_field(name='Links an SCP', value='*scp_link <number> = sends the wiki page for specified scp, i.e. *scp_link 001', inline=False)
+        embed.add_field(name='SCP Link', value='*scp_link <number> = sends the wiki page for specified scp, i.e. *scp_link 001', inline=False)
 
         await ctx.send(embed=embed)
 

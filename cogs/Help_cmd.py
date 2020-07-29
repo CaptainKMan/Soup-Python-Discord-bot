@@ -11,11 +11,19 @@ client.remove_command('help')
 class Help_cmd(commands.Cog):
     def __init__(self, client):
         self.client = client
+    
 
-    #clear command
+
+
     @client.command()
     async def help(self, ctx):
-        author = ctx.message.author
+        await ctx.send('```https://raw.githubusercontent.com/CaptainKMan/Readme/master/README.md```')
+
+
+
+    '''#embed help command
+    @client.command()
+    async def help(self, ctx):
 
         embed = discord.Embed(
 
@@ -52,7 +60,7 @@ class Help_cmd(commands.Cog):
         embed.add_field(name='SCP Link', value='*scp_link <number> = sends the wiki page for specified scp, i.e. *scp_link 001', inline=False)
         embed.add_field(name='\u200b', value='\u200b')
 
-        await ctx.send(embed=embed)
+        await ctx.send(embed=embed)'''
 
 
 def setup(client):

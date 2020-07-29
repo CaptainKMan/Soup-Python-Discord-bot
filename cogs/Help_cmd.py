@@ -27,7 +27,7 @@ class Help_cmd(commands.Cog):
 
         embed.add_field(name='Youtube', value="*youtube = sends the Soup Kitchen's youtube link", inline=False)
         embed.add_field(name='8ball', value='*8ball = an 8ball', inline=False)
-        embed.add_field(name='Help', value='*```help = lists commands```', inline=False)
+        embed.add_field(name='Help', value='```*help = lists commands```', inline=False)
         embed.add_field(name='Twitch', value="*twitch = sends the Soup Kitchen's Member's Twitch.tv links", inline=False)
         embed.add_field(name='R6 Random Operator', value='*aop = Random Attack Operator', inline=False)
         embed.add_field(name='R6 Random Operator', value='*dop = Random Defense Operator', inline=False)

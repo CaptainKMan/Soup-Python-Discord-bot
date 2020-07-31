@@ -98,6 +98,7 @@ class R6_cmds(commands.Cog):
                     'are not to use gadgets',
                     'are not aloud to use audio, no sound allowed. That includes discord sounds. In other words mute your PC',
                     'have to listen to this while you play, on repeat, on 100% volume. https://www.youtube.com/watch?v=6-5F3jt_WWs',
+                    'have to listen to this while you play, on repeat, on 100% volume. https://www.youtube.com/watch?v=ebqHjxhycVA',
                     'are not allowed to lean',
                     'are not allowed to lean or crouch',
                     'change your primary weapons firing mode once',

@@ -27,10 +27,10 @@ class SCP_cmds(commands.Cog):
             await ctx.send(f'http://www.scp-wiki.net/scp-{scp}')
 
     # SCP link
-    '''@client.command()
+    @client.command()
     async def scp_link(self, ctx, *, number):
         await ctx.send(f'SCP-{number}')
-        await ctx.send(f'http://www.scp-wiki.net/scp-{number}')'''
+        await ctx.send(f'http://www.scp-wiki.net/scp-{number}')
 
 
 def setup(client):

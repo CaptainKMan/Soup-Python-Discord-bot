@@ -8,7 +8,7 @@ from discord.ext import commands, tasks
 client = commands.Bot(command_prefix = '*')
 client.remove_command('help')
 
-class SCP_cmds(commands.Cog):
+class Admin_cmds(commands.Cog):
     def __init__(self, client):
         self.client = client
 
@@ -25,4 +25,4 @@ class SCP_cmds(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(SCP_cmds(client))
+    client.add_cog(Admin_cmds(client))

@@ -11,15 +11,17 @@ client = commands.Bot(command_prefix = '*')
 client.remove_command('help')
 
 #start limit testing cmds to me ( Captain_KMan#8827 <id: 357663989418688513> )
-@client.listen('on_message')
+@client.event()
 async def on_message(ctx, message, extension):
     if type(message.author) == discord.user.ClientUser:357663989418688513
     client.load_extension(f'cogs.{extension}')
+    await client.process_commands(message)
 
-@client.listen('on_message')
+@client.event()
 async def on_message(ctx, message):
     if type(message.author) == discord.user.ClientUser:357663989418688513
     await ctx.send('Currently only <@357663989418688513> has access')
+    await client.process_commands(message)
 #end limiting cmds to me
 
 

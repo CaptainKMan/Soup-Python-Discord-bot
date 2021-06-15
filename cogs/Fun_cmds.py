@@ -72,7 +72,6 @@ class Fun_cmds(commands.Cog):
                 'Scissors']
         await ctx.send(f'{random.choice(rockps)}')
 
-    #
 
 
 

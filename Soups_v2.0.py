@@ -7,6 +7,7 @@ from itertools import cycle
 from discord.ext import commands, tasks
 
 client = commands.Bot(command_prefix = '*')
+status = cycle(['DARK SOULS III','Rainbow Six: Quarantine', 'Elden Ring', """with Joseph's internet""", 'Breath of the Wild 2', 'with my feelings', 'with life itself', 'Bo Burnham: Welcome to the internet'])
 
 client.remove_command('help')
 
@@ -26,10 +27,15 @@ for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
 
+#background tasks
+@tasks.loop(hours=168)
+async def change_status():
+    await client.change_presence(activity=discord.Game(next(status)))
+
 # Sends ready message to console & Status
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.online, activity=discord.Game('DARK SOULS III'))
+    change_status.start()
     print('Soups_v2.0 is ready!')
 
 #Sends join message to console

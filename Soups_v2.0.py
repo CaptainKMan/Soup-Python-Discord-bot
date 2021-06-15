@@ -17,7 +17,7 @@ async def on_message(ctx, message, extension):
     client.load_extension(f'cogs.{extension}')
 
 @client.event
-async def on_message(ctx,  message):
+async def on_message(ctx, message):
     if type(message.author) == discord.user.ClientUser:357663989418688513
     await ctx.send('Currently only <@357663989418688513> has access')
 #end limiting cmds to me

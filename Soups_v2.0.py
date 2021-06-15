@@ -18,7 +18,7 @@ async def message(ctx, message, extension):
 
 @client.event
 async def message(ctx, message):
-    if type(message.author) == discord.user.ClientUser:357663989418688513
+    if type(message.author) != discord.user.ClientUser:357663989418688513
     await ctx.send('Currently only <@357663989418688513> has access')
 #end limiting cmds to me
 

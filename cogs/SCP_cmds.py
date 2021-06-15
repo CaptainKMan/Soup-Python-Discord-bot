@@ -13,20 +13,23 @@ class SCP_cmds(commands.Cog):
         self.client = client
 
     # SCP command
-    @client.command()
+    '''@client.command()
     async def scp(self, ctx):
         scp = random.randint(1, 5000)
-        if scp <= (10):
+        if scp < (10):
+            await ctx.send(f'SCP-000{scp}')
+            await ctx.send(f'http://www.scp-wiki.net/scp-000{scp}')
+        if scp > (10):
             await ctx.send(f'SCP-00{scp}')
             await ctx.send(f'http://www.scp-wiki.net/scp-00{scp}')
-        if scp <= (100) and scp >= (10):
+        if scp < (100) and scp >= (10):
+            await ctx.send(f'SCP-00{scp}')
+            await ctx.send(f'http://www.scp-wiki.net/scp-00{scp}')
+        if scp > (100):
             await ctx.send(f'SCP-0{scp}')
-            await ctx.send(f'http://www.scp-wiki.net/scp-0{scp}')
-        if scp >= (100):
-            await ctx.send(f'SCP-{scp}')
-            await ctx.send(f'http://www.scp-wiki.net/scp-{scp}')
+            await ctx.send(f'http://www.scp-wiki.net/scp-0{scp}')'''
 
-    # SCP link
+    # SCP link for specified SCP
     @client.command()
     async def scp_link(self, ctx, *, number):
         await ctx.send(f'SCP-{number}')

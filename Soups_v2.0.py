@@ -56,7 +56,7 @@ async def on_member_remove(member):
 
 #Check Latencys
 @client.command()
-async def ping(ctx, message):
+async def ping(ctx):
     await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
 
 #lets the bot run

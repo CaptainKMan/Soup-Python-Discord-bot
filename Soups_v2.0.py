@@ -29,7 +29,7 @@ for filename in os.listdir('./cogs'):
 # Sends ready message to console & Status
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.online, activity=discord.Game('Rainbow Six: Siege'))
+    await client.change_presence(status=discord.Status.online, activity=discord.Game('DARK SOULS III'))
     print('Soups_v2.0 is ready!')
 
 #Sends join message to console

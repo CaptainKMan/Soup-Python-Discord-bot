@@ -2,6 +2,7 @@ import discord
 import random
 import os
 import time
+import asyncio
 from itertools import cycle
 from discord.ext import commands, tasks
 
@@ -58,4 +59,4 @@ async def ping(ctx):
     await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
 
 
-client.run(os.environ.get['BOT_TOKEN'])
+client.run(str(os.environ.get('BOT_TOKEN')))

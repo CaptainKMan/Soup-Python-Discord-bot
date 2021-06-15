@@ -68,7 +68,7 @@ async def ping(ctx):
 #command specific error message
 @ping.error
 async def clear_error(ctx, error):
-    if isinstance(error, commands.MissingPermissions):
+    if isinstance(error):
         await ctx.send('This is only available to the bot owner.')
 
 #lets the bot run

@@ -9,8 +9,20 @@ client = commands.Bot(command_prefix = '*')
 
 client.remove_command('help')
 
-#limit Teseting CMDs to Me (Captain_KMan#8603)
-"""if ctx.author.id == 357663989418688513:"""
+#limit Teseting CMDs to me ( Captain_KMan#8603 <id: 357663989418688513> )
+@client.event
+#We create an on message event
+async def on_message(message):
+     #We check if the the message that has been sent equals react
+     if "react" in message.content:
+          #We check that the person who sent the message is you
+          if type(message.author) == discord.user.ClientUser:357663989418688513
+             #Do something
+@client.command()
+async def load(ctx, extension):
+    client.load_extension(f'cogs.{extension}')
+
+             
 
 @client.command()
 async def load(ctx, extension):

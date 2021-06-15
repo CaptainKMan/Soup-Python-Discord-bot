@@ -54,6 +54,8 @@ async def on_command_error(ctx, error):
         await ctx.send('Missing arguements, please run the command again with required arguements')
     if isinstance(error, commands.CommandNotFound):
         await ctx.send('bruh thats not even a commmand')
+    if isinstance(error, commands.MissingPermissions):
+        await ctx.send('Unsufficient perms')
 
 #command specific error message
 '''@clear.error
@@ -64,6 +66,7 @@ async def clear_error(ctx, error):
 
 #Check Latencys
 @client.command()
+@commands.is_owner()
 async def ping(ctx):
     await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
 

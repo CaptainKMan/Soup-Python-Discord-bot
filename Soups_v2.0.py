@@ -7,8 +7,7 @@ from itertools import cycle
 from discord.ext import commands, tasks
 
 client = commands.Bot(command_prefix = '*')
-status = cycle(['DARK SOULS III', 'Can I interest you in everything?','Rainbow Six: Quarantine', 'Elden Ring', """with Joseph's internet""", 'Breath of the Wild 2', 'with my feelings', 'with life itself', 'Bo Burnham: Welcome to the internet'])
-
+status = cycle(['DARK SOULS III', 'Can I interest you in everything? All of the time?','Rainbow Six: Quarantine', 'Elden Ring', """with Joseph's internet""", 'Breath of the Wild 2', 'with my feelings', 'with life itself', 'Bo Burnham: Welcome to the internet'])
 client.remove_command('help')
 
 
@@ -47,6 +46,21 @@ async def on_member_join(member):
 @client.event
 async def on_member_remove(member):
     print(f'{member} has left a server.')
+
+#errors
+@client.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.MissingRequiredArgument):
+        await ctx.send('Missing arguements, please run the command again with required arguements')
+    if isinstance(error, commands.CommandNotFound):
+        await ctx.send('bruh thats not even a commmand')
+
+#command specific error message
+'''@clear.error
+async def clear_error(ctx, error):
+    if isinstance(error, commands.MissingRequiredArgument):
+        await ctx.send('Please specify an amount of messages to delete.')'''
+
 
 #Check Latencys
 @client.command()

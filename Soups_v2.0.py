@@ -5,6 +5,7 @@ import time
 import asyncio
 from itertools import cycle
 from discord.ext import commands, tasks
+from discord.ext.commands import errors
 
 client = commands.Bot(command_prefix = '*')
 status = cycle(['DARK SOULS III', 'Can I interest you in everything? All of the time?','Rainbow Six: Quarantine', 'Elden Ring', """with Joseph's internet""", 'Breath of the Wild 2', 'with my feelings', 'with life itself', 'Bo Burnham: Welcome to the internet'])
@@ -68,7 +69,7 @@ async def ping(ctx):
 #command specific error message
 @ping.error
 async def clear_error(ctx, error):
-    if isinstance(error):
+    if isinstance(error, errors.NotOwner):
         await ctx.send('This is only available to the bot owner.')
 
 #lets the bot run

@@ -57,11 +57,6 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.MissingPermissions):
         await ctx.send('Unsufficient perms')
 
-#command specific error message
-'''@clear.error
-async def clear_error(ctx, error):
-    if isinstance(error, commands.MissingRequiredArgument):
-        await ctx.send('Please specify an amount of messages to delete.')'''
 
 
 #Check Latencys
@@ -70,7 +65,11 @@ async def clear_error(ctx, error):
 async def ping(ctx):
     await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
 
-
+#command specific error message
+@ping.error
+async def clear_error(ctx, error):
+    if isinstance(error, commands.MissingPermissions):
+        await ctx.send('This is only available to the bot owner.')
 
 #lets the bot run
 client.run(os.environ.get('BOT_TOKEN'))

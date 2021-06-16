@@ -3,14 +3,21 @@ import random
 import os
 import time
 import asyncio
+import json
 from itertools import cycle
 from discord.ext import commands, tasks
 from discord.ext.commands import errors
 
-client = commands.Bot(command_prefix = '*')
+#Load prefix stuff
+def get_prefix(client, message):
+    with open('prefixes.json', 'r') as f:
+        prefixes = json.load(f)
+    
+    return prefixes[str(message.guild.id)]
+
+client = commands.Bot(command_prefix = get_prefix)
 status = cycle(['DARK SOULS III', 'Can I interest you in everything? All of the time?','Rainbow Six: Quarantine', 'Elden Ring', """with Joseph's internet""", 'Breath of the Wild 2', 'with my feelings', 'with life itself', 'Bo Burnham: Welcome to the internet'])
 client.remove_command('help')
-
 
 #loads cogs
 @client.command()
@@ -31,6 +38,28 @@ for filename in os.listdir('./cogs'):
 @tasks.loop(hours=168)
 async def change_status():
     await client.change_presence(activity=discord.Game(next(status)))
+
+#on joining a guild writes down prefix for that guild
+@client.event
+async def on_guild_join(guild):
+    with open('prefixes.json', 'r') as f:
+        prefixes = json.load(f)
+    
+    prefixes[str(guild.id)] = '*'
+
+    with open('prefixes.json', 'w') as f:
+        json.dump(prefixes, f, indent=4)
+
+#on leaving guild deletes prefix entry
+@client.event
+async def on_guild_remove(guild):
+    with open('prefixes.json', 'r') as f:
+        prefixes = json.load(f)
+    
+    prefixes.pop(str(guild.id))
+
+    with open('prefixes.json', 'w') as f:
+        json.dump(prefixes, f, indent=4)
 
 # Sends ready message to console & Status
 @client.event
@@ -57,8 +86,6 @@ async def on_command_error(ctx, error):
         await ctx.send('bruh thats not even a commmand')
     if isinstance(error, commands.MissingPermissions):
         await ctx.send('Unsufficient perms')
-
-
 
 #Check Latencys
 @client.command()

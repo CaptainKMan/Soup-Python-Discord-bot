@@ -25,7 +25,7 @@ class Admin_cmds(commands.Cog):
     
     #Change prefix command
     @client.command()
-    @commands.has_permissions(manage_messages=True)
+    @commands.has_permissions(administrator=True)
     async def chgprefix(ctx, prefix):
         with open('prefixes.json', 'r') as f:
             prefixes = json.load(f)

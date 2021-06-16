@@ -23,9 +23,9 @@ class Admin_cmds(commands.Cog):
         time.sleep(5)
         await ctx.channel.purge(limit=check)
     
-    
+
     #Change prefix command (doesnt work with heroku)
-'''
+"""
     @client.command()
     @commands.has_permissions(administrator=True)
     async def chgprefix(ctx, prefix):
@@ -38,7 +38,7 @@ class Admin_cmds(commands.Cog):
             json.dump(prefixes, f, indent=4)
         
         await ctx.send(f'Prefix changed to {prefix}')
-'''
+"""
 
 
 def setup(client):

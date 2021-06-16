@@ -2,6 +2,7 @@ import discord
 import random
 import os
 import time
+import json
 from itertools import cycle
 from discord.ext import commands, tasks
 from discord.ext.commands import cooldown, BucketType
@@ -21,8 +22,18 @@ class Admin_cmds(commands.Cog):
         await ctx.send(':white_check_mark:')
         time.sleep(5)
         await ctx.channel.purge(limit=check)
+    
+    #Change prefix command
+    @client.command()
+    @commands.has_permissions(manage_messages=True)
+    async def chgprefix(ctx, prefix):
+        with open('prefixes.json', 'r') as f:
+            prefixes = json.load(f)
+    
+        prefixes[str(ctx.guild.id)] = prefix
 
-
+        with open('prefixes.json', 'w') as f:
+            json.dump(prefixes, f, indent=4)
 
 
 

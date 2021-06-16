@@ -34,6 +34,8 @@ class Admin_cmds(commands.Cog):
 
         with open('prefixes.json', 'w') as f:
             json.dump(prefixes, f, indent=4)
+        
+        await ctx.send(f'Prefix changed to {prefix}')
 
 
 

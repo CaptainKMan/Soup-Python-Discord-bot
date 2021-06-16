@@ -19,7 +19,7 @@ def get_prefix(client, message):
 
 client = commands.Bot(command_prefix = '*')
 status = cycle(['DARK SOULS III', 'Can I interest you in everything? All of the time?','Rainbow Six: Quarantine', 'Elden Ring', """with Joseph's internet""", 'Breath of the Wild 2', 'with my feelings', 'with life itself', 'Bo Burnham: Welcome to the internet'])
-client.remove_command('help')
+
 
 #loads cogs
 @client.command()

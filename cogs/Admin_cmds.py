@@ -8,7 +8,6 @@ from discord.ext import commands, tasks
 from discord.ext.commands import cooldown, BucketType
 
 client = commands.Bot(command_prefix = '*')
-client.remove_command('help')
 
 class Admin_cmds(commands.Cog):
     def __init__(self, client):

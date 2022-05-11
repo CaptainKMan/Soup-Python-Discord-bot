@@ -1,11 +1,5 @@
-import discord
-import random
-import os
 import time
-import json
-from itertools import cycle
-from discord.ext import commands, tasks
-from discord.ext.commands import cooldown, BucketType
+from discord.ext import commands
 
 client = commands.Bot(command_prefix = '*')
 

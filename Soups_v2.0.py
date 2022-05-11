@@ -1,21 +1,18 @@
 import discord
-import random
 import os
-import time
-import asyncio
-import json
+import logging
 from itertools import cycle
 from discord.ext import commands, tasks
 from discord.ext.commands import errors
 
-#Load prefix stuff (doesnt work with heroku)
-"""
-def get_prefix(client, message):
-    with open('prefixes.json', 'r') as f:
-        prefixes = json.load(f)
-    
-    return prefixes[str(message.guild.id)]
-"""
+# handles logging
+logger = logging.getLogger('discord')
+logger.setLevel(logging.DEBUG)
+handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
+handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
+logger.addHandler(handler)
+
+
 
 client = commands.Bot(command_prefix = '*')
 status = cycle(['DARK SOULS III', 'Can I interest you in everything? All of the time?','Rainbow Six: Quarantine', 'Elden Ring', """with Joseph's internet""", 'Breath of the Wild 2', 'with my feelings', 'with life itself', 'Bo Burnham: Welcome to the internet'])
